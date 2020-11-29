@@ -4,21 +4,27 @@ A command line note taking application paired with a sleek and modern user inter
 
 `mindspace` aims to implement the [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) method of note taking while providing a static site to interface with the notes.
 
-### Arguments
+### Usage
 
-`init`: Initialize the mindspace
+```
+Usage: mindspace [OPTIONS] COMMAND [ARGS]...
 
-`new [note]`: Create a new note
+  Entry point for the CLI.
 
-`open [note]`: Open an existing note
+  :param ctx: context object for subcommands
 
-`link [a, b]`: Link two existing notes together
+Options:
+  --help  Show this message and exit.
 
-`rm [note]`: Remove an existing note
-
-`rmlink [a, b]`: Unlink two existing notes
-
-`home`: Output mindspace directory
+Commands:
+  home    Output mindspace directory
+  init    Initialize the Zettelkasten directory
+  link    Link two notes
+  new     Create a new note
+  open    Open an existing note
+  rm      Remove an existing note
+  rmlink  Remove a link between two existing notes
+```
 
 ### Config File
 

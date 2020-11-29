@@ -8,12 +8,13 @@ from ..utils import Utils
 @click.argument("note2", nargs=1, required=True)
 @click.pass_context
 def rmlink(ctx, note1, note2):
+    """
+    Removes a link between two existing notes in the
+    mindspace directory
+    """
     directory = ctx.obj["config"]["owner"]["dir"]
 
     note1, note2 = Note(directory, note1), Note(directory, note2)
-
-    if not note1.valid_note() or not note2.valid_note():
-        Utils.display_error("Invalid note provided", "red")
 
     flag, lines = [0]*2, []
 

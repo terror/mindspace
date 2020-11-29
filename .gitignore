@@ -3,3 +3,5 @@
 /build
 /dist
 /mindspace.egg-info
+/mindspace/__pycache__
+/mindspace/commands/__pycache__

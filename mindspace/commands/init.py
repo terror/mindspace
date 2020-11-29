@@ -13,6 +13,10 @@ dir = "{}"
 
 @click.command("init", short_help="Initialize the Zettelkasten directory")
 def init():
+    """
+    Creates and writes default config to config
+    file in the home directory
+    """
     write_default_config(
         open(os.path.expanduser(Utils.config_file()), "w+"), data)
 

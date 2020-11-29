@@ -4,6 +4,9 @@ import click
 
 
 class Utils:
+    """
+    Utility functions
+    """
     @staticmethod
     def check_config():
         return os.path.exists(Utils.config_file())
