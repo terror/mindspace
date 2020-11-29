@@ -7,6 +7,7 @@ class Note:
         self.directory = directory
         self.name = name
         self.filename = self.filename()
+        self.path = self.path()
 
     def filename(self):
         notes = {}
@@ -38,3 +39,6 @@ class Note:
 
     def valid_note(self):
         return os.path.exists(os.path.join(self.directory, self.filename))
+
+    def path(self):
+        return os.path.join(self.directory, self.filename)

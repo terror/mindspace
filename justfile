@@ -1,3 +1,5 @@
 test:
     pytest
-    ./clean
+
+run:    
+    python3 mindspace

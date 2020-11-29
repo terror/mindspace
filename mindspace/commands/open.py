@@ -9,9 +9,8 @@ from ..utils import Utils
 @click.pass_context
 def open(ctx, note):
     directory = ctx.obj["config"]["owner"]["dir"]
-    note = Note(directory, note)
 
-    path = os.path.join(directory, note.filename)
+    path = Note(directory, note).path
 
     if not os.path.exists(path):
         Utils.display_error("Note does not exist.")

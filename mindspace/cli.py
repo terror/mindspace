@@ -1,12 +1,15 @@
 import click
-from .commands import init, open, new, link
+from .commands import init, open, new, link, home, rm, rmlink
 from .utils import Utils
 
 commands = [
     init.init,
     new.new,
     open.open,
-    link.link
+    link.link,
+    home.home,
+    rm.rm,
+    rmlink.rmlink
 ]
 
 

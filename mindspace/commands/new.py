@@ -9,12 +9,16 @@ import os
 def new(ctx, note):
     directory = ctx.obj["config"]["owner"]["dir"]
 
+    name = create(directory, note)
+
     click.secho(
         "Success! Created note: {} in directory: {}".format(
-            create(directory, note), directory
+            name, directory
         ),
         fg="green",
     )
+
+    click.edit(filename=os.path.join(directory, name))
 
 
 def create(directory, note):
